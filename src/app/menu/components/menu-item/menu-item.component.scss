@@ -1,0 +1,49 @@
+.menu-item {
+  display: grid;
+  grid-template-areas:
+    "actions name sale";
+  grid-template-columns: 2em auto min-content;
+  column-gap: .5em;
+  align-items: center;
+
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  border-radius: 6px;
+
+  &__actions {
+    grid-area: actions;
+
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+
+    font: inherit;
+    line-height: 2;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &:active, &:focus {
+      background-color: #409BEF;
+    }
+  }
+
+  &__name {
+    grid-area: name;
+
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  &__sale {
+    grid-area: sale;
+
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}

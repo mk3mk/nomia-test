@@ -1,0 +1,32 @@
+.form-control {
+  display: block;
+  margin-bottom: 1em;
+
+  &__label {
+    display: block;
+  }
+
+  &__label-text, .as-control-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.8125em;
+    margin-bottom: 0.61538em;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 1.07em 0.875em;
+    border: 1px solid #C3CEE0;
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    font: inherit;
+    font-size: 0.875em;
+    line-height: 1.285;
+  }
+}

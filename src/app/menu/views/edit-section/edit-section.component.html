@@ -1,0 +1,38 @@
+<div class="edit-section">
+  <div class="edit-section__header">
+    <span class="edit-section__header-title">Добавить раздел</span>
+    <button routerLink="../" class="button-link">Отмена</button>
+  </div>
+  <div class="edit-section__form" [formGroup]="form">
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__label-text">Название</span>
+        <input type="text" class="form-control__input" placeholder="Введите название категории" formControlName="name">
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__label-text">Раздел</span>
+        <select type="text" class="form-control__input" formControlName="sectionId">
+          <option [value]="null">Не выбрано</option>
+          <option [value]="section.name" *ngFor="let section of (sections | async).items">{{ section.name }}</option>
+        </select>
+      </label>
+    </div>
+    <!-- TODO: color picker -->
+    <!-- <div class="form-control">
+      <div class="as-control-label">Цвет раздела</div>
+      <label class="form-control__radio-label">
+        <input class="form-control__radio-input" type="radio" value="" name="color">
+        <span class="form-control__radio-color"></span>
+      </label>
+    </div> -->
+  </div>
+  <div class="edit-section__footer">
+    <div class="edit-section__message" *ngIf="isSaving">Saving...</div>
+    <button class="button button--block" (click)="save()" [disabled]="!form.valid">Сохранить</button>
+  </div>
+</div>
+
+
+

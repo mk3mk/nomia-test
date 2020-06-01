@@ -1,0 +1,14 @@
+<div class="menu-section">
+  <div class="menu-section__color-badge" [style]="{ backgroundColor: 'red'}"></div>
+  <div class="menu-section__toggle" (click)="toggle()">T</div>
+  <button class="menu-section__actions">A</button>
+  <div class="menu-section__name">{{ section.name }}</div>
+  <div class="menu-section__order">
+    <span class="menu-section__order-action">up</span>
+    <span class="menu-section__order-action">down</span>
+  </div>
+</div>
+<div class="menu-section-childs" *ngIf="isOpen">
+  <nomia-menu-section *ngFor="let subSection of section.sections; trackBy: trackByForSections" [section]="subSection"></nomia-menu-section>
+  <nomia-menu-item *ngFor="let item of section.items; trackBy: trackByForItems" [item]="item"></nomia-menu-item>
+</div>

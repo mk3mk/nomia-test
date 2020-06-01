@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: #ECF1F9;
+  min-height: 100%;
+}
+
+.page-header {
+  padding: 1em 0.75em;
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 1.12em;
+  line-height: 1.3;
+}
+
+.page-divider {
+  height: 1px;
+  width: calc(100% - 1.5em);
+  margin: 0 auto;
+  background-color: #C3CEE0;
+}
+
+.page-content {
+  flex: 1 1 auto;
+}

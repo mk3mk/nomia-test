@@ -1,0 +1,28 @@
+:host {
+  position: relative;
+  display: block;
+  padding: 0.75em;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.menu-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.75em;
+
+  margin-bottom: 0.75em;
+}
+
+.menu-button {
+  padding: 0.75em 0.5em;
+
+  border: 1px solid #C3CEE0;
+  border-radius: 6px;
+  background-color: transparent;
+  box-sizing: border-box;
+
+  font: inherit;
+  text-align-last: left;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+<!-- <button (click)="refresh()">refresh</button>
+<button (click)="addSection()">add section</button>
+<button (click)="addItem()">add item</button> -->
+
+<div class="menu-actions">
+  <button class="menu-button" routerLink="/edit-section">+ Раздел</button>
+  <button class="menu-button" routerLink="/edit-item">+ Позиция</button>
+</div>
+
+<ng-container *ngIf="menu$ | async as menuState">
+  <div class="loading" *ngIf="menuState.isLoading">Loading...</div>
+  <div class="error" *ngIf="menuState.error">Some error occured...</div>
+  <div class="empty" *ngIf="menuState.items?.length === 0">Empty menu</div>
+  <ng-container *ngFor="let section of menuState.items; trackBy: trackByForSections">
+    <nomia-menu-section [section]="section"></nomia-menu-section>
+  </ng-container>
+</ng-container>
+
+<router-outlet></router-outlet>
